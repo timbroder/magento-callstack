@@ -1,0 +1,15 @@
+<config>
+    <modules>
+        <Timbroder_Stack>
+             <version>0.0.1</version>
+        </Timbroder_Stack>
+    </modules>
+
+    <global>
+         <helpers>
+            <stack>
+                <class>Timbroder_Stack_Helper</class>
+            </stack>
+        </helpers>
+    </global>
+ </config>

@@ -1,0 +1,9 @@
+<config> 
+    <modules> 
+        <Timbroder_Stack> 
+            <active>true</active> 
+            <codePool>community</codePool> 
+
+        </Timbroder_Stack> 
+    </modules> 
+</config>
