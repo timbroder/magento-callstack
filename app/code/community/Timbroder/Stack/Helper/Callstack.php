@@ -16,7 +16,7 @@ class Timbroder_Stack_Helper_Callstack extends Mage_Core_Helper_Abstract
 		Mage::log($this->get_callstack());
 	}
 	
-	function toFirePhp() {
+	public function toFirePhp() {
 		$stack = $this->get_callstack();
 		foreach (explode("\n", $stack) as $line) {
 			Mage::helper('firephp')->send($line);
