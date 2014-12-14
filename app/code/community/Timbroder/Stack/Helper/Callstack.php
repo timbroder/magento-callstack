@@ -2,12 +2,12 @@
 
 class Timbroder_Stack_Helper_Callstack extends Mage_Core_Helper_Abstract
 {
-	private function get_callstack($delim="\n") {
+	private function get_callstack($delim = PHP_EOL) {
 		$dt = debug_backtrace();
 		$cs = '';
 		$count = count($dt);
 		foreach ($dt as $t) {
-			$cs .= '['. $count . '] ' . $t['file'] . ' line ' . $t['line'] . ' calls ' . $t['function'] . "()" . PHP_EOL;
+			$cs .= '['. $count . '] ' . $t['file'] . ' line ' . $t['line'] . ' calls ' . $t['function'] . "()" . $delim;
 			$count -= 1;
 		}
 		return $cs;
