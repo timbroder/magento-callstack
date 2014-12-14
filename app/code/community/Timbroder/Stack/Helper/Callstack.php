@@ -3,13 +3,14 @@
 class Timbroder_Stack_Helper_Callstack extends Mage_Core_Helper_Abstract
 {
 	private function get_callstack($delim="\n") {
-	  $dt = debug_backtrace();
-	  $cs = '';
-	  foreach ($dt as $t) {
-	    $cs .= $t['file'] . ' line ' . $t['line'] . ' calls ' . $t['function'] . "()" . $delim;
-	  }
-	
-	  return $cs;
+		$dt = debug_backtrace();
+		$cs = '';
+		$count = count($dt);
+		foreach ($dt as $t) {
+			$cs .= '['. $count . '] ' . $t['file'] . ' line ' . $t['line'] . ' calls ' . $t['function'] . "()" . PHP_EOL;
+			$count -= 1;
+		}
+		return $cs;
 	}    
 	
 	public function toLog() {
